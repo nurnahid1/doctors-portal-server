@@ -40,7 +40,7 @@ async function run (){
         const usersCollection = client.db('doctors_portal').collection('users')
         const doctorsCollection = client.db('doctors_portal').collection('doctors')
 
-        // varifyAdmin jwt
+        // varifyAdmin jwt token
         const varifyAdmin = async(req, res, next) =>{
             const requester = req.decoded.email;
             const requesterAccount = await usersCollection.findOne({email: requester});
