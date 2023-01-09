@@ -34,7 +34,7 @@ function varifyJWT(req, res, next){
 
 async function run (){
     try{
-        
+        await client.connect();
         const servicesCollection = client.db('doctors_portal').collection('services')
         const bookingsCollection = client.db('doctors_portal').collection('bookings')
         const usersCollection = client.db('doctors_portal').collection('users')
